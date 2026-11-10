@@ -1,0 +1,30 @@
+[package]
+name = "autoarr"
+version = "0.5.0"
+edition = "2024"
+description = "Native API CLI for an Arr and media-server stack"
+
+[[bin]]
+name = "autoarr"
+path = "rust/main.rs"
+
+[dependencies]
+base64 = "0.22"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+ctrlc = "3.5"
+libc = "0.2"
+md-5 = "0.10"
+mime_guess = "2.0"
+percent-encoding = "2.3"
+rayon = "1.12"
+regex = "1.12"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "cookies", "json", "multipart", "rustls-tls"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+sha2 = "0.10"
+tempfile = "3.24"
+url = "2.5"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autoarr-python-reference"
+version = "0.4.0"
+description = "Python 0.4 reference runtime for AutoARR compatibility tests and benchmarks"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+autoarr-python = "autoarr.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

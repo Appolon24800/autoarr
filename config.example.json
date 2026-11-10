@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "apps": {
+    "radarr": {
+      "kind": "radarr",
+      "url": "https://radarr.example.invalid",
+      "api_key_env": "RADARR_API_KEY"
+    },
+    "sonarr": {
+      "kind": "sonarr",
+      "url": "https://sonarr.example.invalid",
+      "api_key_env": "SONARR_API_KEY"
+    },
+    "jellyfin": {
+      "kind": "jellyfin",
+      "url": "https://jellyfin.example.invalid",
+      "api_key_env": "JELLYFIN_API_KEY"
+    },
+    "navidrome": {
+      "kind": "navidrome",
+      "url": "https://navidrome.example.invalid",
+      "username": "your-user",
+      "password_env": "NAVIDROME_PASSWORD"
+    }
+  }
+}

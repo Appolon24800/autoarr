@@ -1,0 +1,31 @@
+.local/
+__pycache__/
+*.pyc
+.env
+.env.*
+.venv/
+build/
+dist/
+*.egg-info/
+# Rust build products; keep Cargo.lock for reproducible binaries.
+/target/
+
+# Private connections, credentials, and local agent instructions.
+/config.json
+/config.*.json
+!/config.example.json
+*.pem
+*.key
+AGENTS.md
+
+# Keep server audits, personal records, and administration scripts local.
+/docs/*
+!/docs/cli.md
+!/docs/benchmarks/
+/docs/benchmarks/*
+!/docs/benchmarks/rust-vs-python.*
+/scripts/*
+!/scripts/benchmark_latency.py
+!/scripts/benchmark_output.py
+!/scripts/benchmark_rust.py
+/tests/live_readonly.py

@@ -1,0 +1,138 @@
+{
+  "createdAt": "2026-10-27T00:43:42.401944+00:00",
+  "versions": {
+    "python": "0.4.0",
+    "rust": "0.5.0"
+  },
+  "platform": {
+    "os": "Linux",
+    "architecture": "x86_64",
+    "python": "3.14.8"
+  },
+  "samples": 11,
+  "warmups": 2,
+  "rustBinaryBytes": 6348624,
+  "measurement": "Complete fresh CLI processes, wall-clock latency; alternating runtime order; release build; local synthetic HTTP/data only.",
+  "scenarios": [
+    {
+      "name": "startup",
+      "nativeRequests": 0,
+      "apiDelayMs": 0,
+      "resultCaching": false,
+      "equivalentOutput": false,
+      "python": {
+        "medianMs": 46.22,
+        "p95Ms": 48.324,
+        "minMs": 44.84,
+        "stdoutBytes": 6
+      },
+      "rust": {
+        "medianMs": 0.476,
+        "p95Ms": 0.688,
+        "minMs": 0.352,
+        "stdoutBytes": 6
+      },
+      "speedup": 97.1
+    },
+    {
+      "name": "offline_filter_266_releases",
+      "nativeRequests": 0,
+      "apiDelayMs": 0,
+      "resultCaching": false,
+      "equivalentOutput": true,
+      "python": {
+        "medianMs": 54.921,
+        "p95Ms": 55.578,
+        "minMs": 53.648,
+        "stdoutBytes": 844
+      },
+      "rust": {
+        "medianMs": 3.5,
+        "p95Ms": 3.685,
+        "minMs": 3.33,
+        "stdoutBytes": 844
+      },
+      "speedup": 15.69
+    },
+    {
+      "name": "single_read",
+      "nativeRequests": 1,
+      "apiDelayMs": 0,
+      "resultCaching": false,
+      "equivalentOutput": true,
+      "python": {
+        "medianMs": 54.722,
+        "p95Ms": 56.85,
+        "minMs": 53.221,
+        "stdoutBytes": 46
+      },
+      "rust": {
+        "medianMs": 2.003,
+        "p95Ms": 2.197,
+        "minMs": 1.845,
+        "stdoutBytes": 46
+      },
+      "speedup": 27.32
+    },
+    {
+      "name": "batch_20_reads",
+      "nativeRequests": 20,
+      "apiDelayMs": 0,
+      "resultCaching": false,
+      "equivalentOutput": true,
+      "python": {
+        "medianMs": 170.901,
+        "p95Ms": 172.465,
+        "minMs": 167.933,
+        "stdoutBytes": 2186
+      },
+      "rust": {
+        "medianMs": 4.835,
+        "p95Ms": 5.158,
+        "minMs": 4.366,
+        "stdoutBytes": 2186
+      },
+      "speedup": 35.35
+    },
+    {
+      "name": "dependent_3_steps",
+      "nativeRequests": 2,
+      "apiDelayMs": 0,
+      "resultCaching": true,
+      "equivalentOutput": true,
+      "python": {
+        "medianMs": 71.406,
+        "p95Ms": 74.227,
+        "minMs": 70.544,
+        "stdoutBytes": 503
+      },
+      "rust": {
+        "medianMs": 2.784,
+        "p95Ms": 3.242,
+        "minMs": 2.649,
+        "stdoutBytes": 503
+      },
+      "speedup": 25.65
+    },
+    {
+      "name": "batch_20_reads_8ms_api",
+      "nativeRequests": 20,
+      "apiDelayMs": 8.0,
+      "resultCaching": false,
+      "equivalentOutput": true,
+      "python": {
+        "medianMs": 213.079,
+        "p95Ms": 215.31,
+        "minMs": 209.328,
+        "stdoutBytes": 2186
+      },
+      "rust": {
+        "medianMs": 44.821,
+        "p95Ms": 44.975,
+        "minMs": 44.452,
+        "stdoutBytes": 2186
+      },
+      "speedup": 4.75
+    }
+  ]
+}
